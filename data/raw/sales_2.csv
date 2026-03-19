@@ -1,0 +1,26 @@
+Order_ID,Date,Region,Product,Category,Quantity,Price,Revenue,Customer_Name
+4001,2024-01-10,North,Laptop,Electronics,2,55000,110000,Rahul Sharma
+4002,2024-01-22,,Chair,Furniture,3,2500,7500,Anita Verma
+4003,2024-02-05,East,,Stationery,10,50,500,Rohan Das
+4004,2024-02-18,West,Mobile,Electronics,,20000,60000,Priya Singh
+4005,,North,Table,Furniture,1,7000,7000,Amit Kumar
+4006,2024-03-25,South,Pen,Stationery,20,,400,Sneha Iyer
+4007,2024-04-02,East,Laptop,Electronics,1,60000,,Karan Patel
+4008,2024-04-14,West,Chair,,2,3000,6000,Neha Gupta
+4009,2024-05-06,North,Notebook,Stationery,15,60,900,
+4010,2024-05-20,South,Mobile,Electronics,2,18000,36000,Meera Nair
+4010,2024-05-20,South,Mobile,Electronics,2,18000,36000,Meera Nair
+4011,2024-06-12,East,Table,Furniture,3,6500,19500,Vikas Rao
+4012,2024-06-29,West,Pen,Stationery,0,15,0,Simran Kaur
+4013,2024-07-08,North,Laptop,Electronics,-1,58000,-58000,Deepak Yadav
+4014,2024-07-19,South,Chair,Furniture,5,2200,11000,Kavita Joshi
+4015,2024-08-03,East,Notebook,Stationery,12,55,660,Aditya Roy
+4016,2024-08-21,West,Mobile,Electronics,4,21000,84000,Pooja Mishra
+4017,2024-09-09,North,Table,Furniture,2,7200,14400,Sanjay Gupta
+4018,2024-09-27,South,Pen,Stationery,25,18,450,Ritu Agarwal
+4019,2024-10-11,East,Laptop,Electronics,2,57000,114000,Manish Tiwari
+4020,2024-10-30,West,Chair,Furniture,3,2800,8400,Nidhi Kapoor
+4021,2024-11-14,North,Notebook,Stationery,18,50,900,Ashok Singh
+4022,2024-11-29,South,Mobile,Electronics,1,22000,22000,Divya Menon
+4023,2024-12-06,East,Table,Furniture,2,6800,13600,Rajesh Khanna
+4024,2024-12-20,West,Pen,Stationery,40,12,480,Alok Srivastava

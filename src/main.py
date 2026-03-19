@@ -31,6 +31,13 @@ def get_data():
     else:
         return ld.load_data()
 
+def get_clean(dataset):
+    print("Cleaning the data...")
+    print("Converting the datatype of columns...")
+    print("Drop duplicate rows...")
+    print("Drop rows containing nan values...")
+    print("Removing wrong values rows...")
+    return an.clean_data(dataset)
 
 # -------------------------------
 # Menu dictionary
@@ -39,12 +46,12 @@ def get_data():
 menu = {
     1:get_data,
     2:an.display_data,
-    3:"Clean Data",
-    4:"Total Sales",
-    5:"Sales by Month",
-    6:"Top Products",
-    7:"Sales by Category",
-    8:"Region-wise Sales",
+    3:get_clean,
+    4:an.total_sales,
+    5:an.sales_by_month,
+    6:an.top_products,
+    7:an.sales_by_cate,
+    8:an.sales_by_region,
     9:"Customer Analysis",
     10:"Best Sales Period",
     11:"Average Order Value",
@@ -91,7 +98,7 @@ def main():
                 if df is None:
                     print("Load data first.")
                     continue
-                action(df)
+                dataset = action(df)
             else:
                 print("Invalid choice. Please try again.")
 
