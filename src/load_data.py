@@ -1,6 +1,6 @@
 import pandas as pd
 
-def load_data(file_path="data/raw/sales.csv"):
+def load_data(file_path="data/raw/sales_1.csv"):
     try:
         df = pd.read_csv(file_path)
         if df.empty:

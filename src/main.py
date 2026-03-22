@@ -1,5 +1,6 @@
 import load_data as ld
 import analysis as an
+import utility as ut
 
 # -------------------------------
 # Safe input functions
@@ -17,7 +18,7 @@ def get_float(prompt):
         try:
             return float(input(prompt))
         except ValueError:
-            print("Invalid input. Please enter a number.")  
+            print("Invalid input. Please enter a number.")
 
 # -------------------------------
 # Menu wrapper functions
@@ -37,7 +38,13 @@ def get_clean(dataset):
     print("Drop duplicate rows...")
     print("Drop rows containing nan values...")
     print("Removing wrong values rows...")
-    return an.clean_data(dataset)
+    clean_dataset =  an.clean_data(dataset)
+    return clean_dataset
+
+def average_order_value(dataset):
+    avg_val = an.avg_order_val(dataset['Revenue'].sum(),dataset['Order_ID'].nunique())
+    print(f"Average Order Value: ₹ {avg_val}")
+    return dataset
 
 # -------------------------------
 # Menu dictionary
@@ -52,11 +59,10 @@ menu = {
     6:an.top_products,
     7:an.sales_by_cate,
     8:an.sales_by_region,
-    9:"Customer Analysis",
-    10:"Best Sales Period",
-    11:"Average Order Value",
-    12:"Export Result",
-    13:"Exit"
+    9:an.customer_analysis,
+    10:an.best_sales_period,
+    11:average_order_value,
+    12:an.export_result
 }
 
 # -------------------------------
@@ -87,18 +93,24 @@ def main():
         choice = get_int("Enter your choice: ")
 
         if choice == 1: 
-            df = get_data()
+            new_df = get_data()
+            if new_df is not None:
+                df = new_df
+
         elif choice == 13:
             print("Exiting the program. Goodbye!")
             break
         
         else:
+            
             action = menu.get(choice)
             if action:
                 if df is None:
                     print("Load data first.")
-                    continue
-                dataset = action(df)
+                else:
+                    df = action(df)
+                    ut.pause_screen()
+                
             else:
                 print("Invalid choice. Please try again.")
 
